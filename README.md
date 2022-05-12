@@ -13,7 +13,10 @@ Unity editor tool lists all project textures.
 <img src = "images/texture_analyzer_scr_01.png">
 
 ## Install: Git URL (Unity Package Manager)
+```git
 https://github.com/Tokars/Unity-Texture-analyzer.git
+```
+
 
 ## How to use
 Editor menu open: `Window > Analysis > Texture Analyzer`
