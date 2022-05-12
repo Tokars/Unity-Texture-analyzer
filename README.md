@@ -1,15 +1,15 @@
+
 # Unity Texture analyzer.
 Unity editor tool lists all project textures.
 ## Features:
-Displays import settings:
-- Texture type
-- Texture max size
-- Texture applied size
-- Texture data size
-- NPOT
-- Generate Mip Maps flag
-- Alpha Is Transparency flag
-Handy access to settings on select. Search and column sorting.
+- Displays import settings:
+
+|Texture Type|NPOT|Max Size|Generate Mip Maps|Generate Mip Maps|Alpha Is Transparency|Texture Size|Data Size|
+|-|-|-|-|-|-|-|-|
+
+- Handy access to settings on select.
+- Search and column sorting.
+
 <img src = "images/texture_analyzer_scr_01.png">
 
 ## Install: Git URL (Unity Package Manager)
