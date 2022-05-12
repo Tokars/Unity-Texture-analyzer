@@ -1,0 +1,11 @@
+{
+    "name": "tokar.dev.texture_analyzer.Runtime.Tests",
+    "references": [
+        "tokar.dev.texture_analyzer.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}

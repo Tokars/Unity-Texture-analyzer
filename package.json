@@ -1,0 +1,21 @@
+{
+    "name": "tokar.dev.texture_analyzer",
+    "version": "0.1.1",
+    "displayName": "Texture Analyzer",
+    "description": "Editor texure analyzer.",
+    "license": "MIT",
+    "publishConfig": {
+        "registry": ""
+    },
+    "samples": [],
+    "author": {
+        "name": "",
+        "email": "tokar.dev@gmail.com",
+        "url": ""
+    },
+    "repository": {
+        "type": "",
+        "url": "https://github.com/Tokars/UnityEditor-TextureViewer.git"
+    },
+    "hideInEditor": false
+}

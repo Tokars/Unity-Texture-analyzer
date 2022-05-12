@@ -1,0 +1,14 @@
+{
+    "name": "tokar.dev.texture_analyzer.Editor.Tests",
+    "references": [
+        "tokar.dev.texture_analyzer.Runtime",
+        "tokar.dev.texture_analyzer.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}

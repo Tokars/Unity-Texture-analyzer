@@ -1,0 +1,11 @@
+{
+    "name": "tokar.dev.texture_analyzer.Editor",
+    "references": [
+        "tokar.dev.texture_analyzer.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "optionalUnityReferences": []
+}
