@@ -1,19 +1,22 @@
-# UnityEditor-TextureViewer
-Texture Viewer is a tool to view Textures in your Unity project.
+# Unity Texture analyzer.
+Unity editor tool lists all project textures.
+## Features:
+Displays import settings:
+- Texture type
+- Texture max size
+- Texture applied size
+- Texture data size
+- NPOT
+- Generate Mip Maps flag
+- Alpha Is Transparency flag
+Handy access to settings on select. Search and sorting.
+<img src = "images/texture_analyzer_scr_01.png">
 
-<img src = "images/overview.png">
+## Install: Git URL (Unity Package Manager)
+https://github.com/Tokars/Unity-Texture-analyzer.git
 
-## Git URL (Unity Package Manager)
-https://github.com/rngtm/UnityEditor-TextureViewer.git?path=Assets/TextureViewer
-
-<br>
-
-# How to use
-
-## How to open 
-Select menu  **Tools > Texture Viewer**<br>
-
-<img src = "images/open_window.png">
+## How to use
+Editor menu open: `Window > Analysis > Texture Analyzer`
 
 ## Sorting
 Click the column header to sort items.

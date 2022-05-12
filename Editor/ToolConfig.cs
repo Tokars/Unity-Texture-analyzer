@@ -29,7 +29,7 @@ namespace TextureTool
         public readonly static string LoadingMessage = "Loading...";
 
         // ウィンドウタイトル
-        public readonly static GUIContent WindowTitle = new GUIContent("Texture Viewer"); 
+        public readonly static GUIContent WindowTitle = new GUIContent("Texture Analyzer"); 
 
         public const int MB = 1024 * 1024; 
         public const int RedDataSize = 3 * MB; // データサイズがこれを超えたら赤で警告
