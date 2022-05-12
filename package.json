@@ -1,21 +1,23 @@
 {
-    "name": "tokar.dev.texture_analyzer",
-    "version": "0.1.1",
-    "displayName": "Texture Analyzer",
-    "description": "Editor texure analyzer.",
-    "license": "MIT",
-    "publishConfig": {
-        "registry": ""
-    },
-    "samples": [],
-    "author": {
-        "name": "",
-        "email": "tokar.dev@gmail.com",
-        "url": ""
-    },
-    "repository": {
-        "type": "",
-        "url": "https://github.com/Tokars/UnityEditor-TextureViewer.git"
-    },
-    "hideInEditor": false
+  "name": "tokar.dev.texture_analyzer",
+  "version": "0.1.1",
+  "displayName": "Texture Analyzer",
+  "description": "Editor texture analyzer.",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": ""
+  },
+  "samples": [],
+  "author": {
+    "name": "Oleksandr Tokar",
+    "email": "tokar.dev@gmail.com",
+    "url": ""
+  },
+  "repository": {
+    "type": "",
+    "url": "https://github.com/Tokars/Unity-Texture-analyzer.git"
+  },
+  "hideInEditor": false,
+  "type": "tool",
+  "unity": "2019.3"
 }
