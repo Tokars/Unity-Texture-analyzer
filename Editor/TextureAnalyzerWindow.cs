@@ -2,6 +2,7 @@
 * Texture Viewer
 * @ 2019 RNGTM
 ***********************************************************************************/
+
 namespace TextureTool
 {
     using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace TextureTool
 
         [SerializeField] private TextureTreeViewState treeViewState = null; // TreeViewの状態
         [SerializeField] private TextureColumnHeaderState headerState = null; // TreeViewヘッダー状態
-        [SerializeField] private SearchState[] columnSearchStates = new SearchState[0]  ; // 検索状態 (列)
+        [SerializeField] private SearchState[] columnSearchStates = new SearchState[0]; // 検索状態 (列)
         [System.NonSerialized] private Texture2D[] textures = new Texture2D[0]; // ロードしたテクスチャ
         [System.NonSerialized] private TextureImporter[] textureImporters = new TextureImporter[0];
         private TextureTreeView treeView = null; // TreeView 
@@ -63,7 +64,6 @@ namespace TextureTool
 
             DrawHeader();
             DrawTreeView();
-
         }
 
         /** ********************************************************************************
@@ -82,8 +82,7 @@ namespace TextureTool
                 rect.position += MyStyle.LoadingLabelPosition;
                 EditorGUI.LabelField(rect, ToolConfig.CreatingMessage, MyStyle.LoadingLabel);
             }
-            else
-            if (isLoadingTexture)
+            else if (isLoadingTexture)
             {
                 EditorGUI.BeginDisabledGroup(true);
                 treeView?.OnGUI(rect);
@@ -125,7 +124,10 @@ namespace TextureTool
         ***********************************************************************************/
         private void DrawReloadButton()
         {
-            if (treeView == null) { return; }
+            if (treeView == null)
+            {
+                return;
+            }
 
             if (GUILayout.Button("Reload"))
             {
@@ -140,18 +142,26 @@ namespace TextureTool
 
                 EditorApplication.delayCall += () => treeView.searchString = TextureTreeView.defaultSearchString;
             }
+
             if (GUILayout.Button("Recommended texture formats"))
-            {
                 Application.OpenURL("https://docs.unity3d.com/Manual/class-TextureImporterOverride.html");
-            }        }
+        }
 
         /** ********************************************************************************
         * @summary TreeView の更新 Update
         ***********************************************************************************/
         private void CreateTreeView()
         {
-            if (treeView != null) { return; }
-            if (isCreatingTreeView) { return; }
+            if (treeView != null)
+            {
+                return;
+            }
+
+            if (isCreatingTreeView)
+            {
+                return;
+            }
+
             isCreatingTreeView = true;
             Repaint();
 
@@ -185,7 +195,7 @@ namespace TextureTool
         }
 
         /** ********************************************************************************
-        * @summary 指定したディレクトリからアセット一覧を取得
+        * @summary 指定したディレクトリからアセット一覧を取得 - Get the asset list from the specified directory.
         ***********************************************************************************/
         public static IEnumerable<string> GetAssetPaths(string[] directories, string filter = "")
         {
@@ -208,27 +218,24 @@ namespace TextureTool
 
 
         /** ********************************************************************************
-        * @summary ウィンドウにフォーカスが乗ったら呼ばれる
+        * @summary ウィンドウにフォーカスが乗ったら呼ばれる - Called when the window is in focus.
         ***********************************************************************************/
         private void OnFocus()
         {
-            if (treeView != null)
-            {
-                treeView.UpdateDataSize();
-            }
+            treeView?.UpdateDataSize();
         }
 
         /** ********************************************************************************
-        * @summary テクスチャのロード
+        * @summary テクスチャのロード - Loading texture
         ***********************************************************************************/
         public void ReloadTexture()
         {
-            if (isLoadingTexture) { return; }
+            if (isLoadingTexture) return;
 
             isLoadingTexture = true;
             CustomUI.DisplayProgressLoadTexture();
 
-            // 指定ディレクトリからテクスチャロード
+            // 指定ディレクトリからテクスチャロード - Load texture from specified directory.
             var paths = GetAssetPaths(ToolConfig.TargetDirectories, "t:texture2d");
             var textureList = new List<Texture2D>();
             var importerList = new List<TextureImporter>();
@@ -242,6 +249,7 @@ namespace TextureTool
                 textureList.Add(texture);
                 importerList.Add(importer);
             }
+
             textures = textureList.ToArray();
             textureImporters = importerList.ToArray();
 
