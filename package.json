@@ -1,6 +1,6 @@
 {
   "name": "tokar.dev.texture_analyzer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "displayName": "Texture Analyzer",
   "description": "Editor texture analyzer.",
   "license": "MIT",
