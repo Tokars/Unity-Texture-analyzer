@@ -50,7 +50,7 @@ namespace TextureTool
             if (RedLabel == null)
             {
                 RedLabel = new GUIStyle(EditorStyles.label);
-                RedLabel.normal.textColor = new Color(1f, 0f, 0f);
+                RedLabel.normal.textColor = new Color(1f, 0.2f, 0.1f);
                 //RedLabel.fontStyle = FontStyle.Bold;
             }
 

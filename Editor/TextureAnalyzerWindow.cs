@@ -105,10 +105,9 @@ namespace TextureTool
             var defaultColor = GUI.backgroundColor;
 
             // 検索窓を描画
-            using (new EditorGUILayout.HorizontalScope(EditorStyles.toolbar))
+            using (new EditorGUILayout.HorizontalScope(EditorStyles.label))
             {
-                // GUI.backgroundColor = Color.green;
-                DrawReloadButton();
+                DrawButtons();
                 GUI.backgroundColor = defaultColor;
 
                 GUILayout.Space(100);
@@ -122,13 +121,9 @@ namespace TextureTool
         /** ********************************************************************************
         * @summary リロードボタン - reload btn.
         ***********************************************************************************/
-        private void DrawReloadButton()
+        private void DrawButtons()
         {
-            if (treeView == null)
-            {
-                return;
-            }
-
+            if (treeView == null) return;
             if (GUILayout.Button("Reload"))
             {
                 CreateTreeView();
@@ -139,9 +134,11 @@ namespace TextureTool
                 treeView.SetTexture(textures, textureImporters);
                 treeView.Reload(); // Reloadを呼ぶとBuildRootが実行され、次にBuildRowsが実行されます。
 
-
                 EditorApplication.delayCall += () => treeView.searchString = TextureTreeView.defaultSearchString;
             }
+            GUI.backgroundColor = new Color(0.5F, 1F, 0.3F, 1);
+
+            // if (GUILayout.Button(nameof(Generate), GUILayout.MaxWidth(120)))
 
             if (GUILayout.Button("Recommended texture formats"))
                 Application.OpenURL("https://docs.unity3d.com/Manual/class-TextureImporterOverride.html");
