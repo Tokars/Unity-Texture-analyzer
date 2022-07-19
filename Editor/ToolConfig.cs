@@ -24,7 +24,7 @@ namespace TextureTool
         public readonly static string[] TargetDirectories = new string[] { "Assets" };  
 
         // テキスト
-        public readonly static string ProgressTitle = "テクスチャ表示ウィンドウを初期化しています";
+        public readonly static string ProgressTitle = "Analysis...";
         public readonly static string CreatingMessage = "Creating...";
         public readonly static string LoadingMessage = "Loading...";
 
